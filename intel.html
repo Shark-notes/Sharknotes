@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Notes App - Underwater Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar for Folders/Sharks -->
+        <aside class="sidebar">
+            <header>
+                <h1>Shark Species</h1>
+                <button id="add-folder-btn">+</button>
+            </header>
+            <ul id="folder-list">
+                <!-- Folder items will be dynamically inserted here -->
+            </ul>
+        </aside>
+
+        <!-- Main Content Area for Notes -->
+        <main class="main-content">
+            <div class="note-header">
+                <h2 id="current-folder-title">Select a species</h2>
+                <button id="save-note-btn">Save Note</button>
+            </div>
+            <textarea id="note-textarea" placeholder="Type your notes about this shark species here..."></textarea>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

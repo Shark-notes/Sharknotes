@@ -1,0 +1,129 @@
+:root {
+    --deep-ocean-blue: #001f3f;
+    --pacific-blue: #007acc;
+    --aqua-splash: #41d9e1;
+    --coral-accent: #FF6F61;
+    --white-foam: #ecf0f1;
+    --sidebar-bg: #003366;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--deep-ocean-blue);
+    color: var(--white-foam);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar Styling (Folders) */
+.sidebar {
+    flex-basis: 300px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid var(--pacific-blue);
+}
+
+.sidebar header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar h1 {
+    font-size: 1.2rem;
+    color: var(--aqua-splash);
+}
+
+#add-folder-btn {
+    background-color: var(--coral-accent);
+    color: var(--white-foam);
+    border: none;
+    padding: 5px 12px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#folder-list {
+    list-style: none;
+    overflow-y: auto;
+}
+
+.folder-item {
+    padding: 10px 5px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s;
+}
+
+.folder-item:hover {
+    background-color: var(--pacific-blue);
+}
+
+.folder-item.active {
+    background-color: var(--pacific-blue);
+    font-weight: bold;
+}
+
+/* Main Content Styling (Notes Area) */
+.main-content {
+    flex-grow: 1;
+    background-color: var(--deep-ocean-blue);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.note-header h2 {
+    color: var(--aqua-splash);
+}
+
+#save-note-btn {
+    background-color: var(--coral-accent);
+    color: var(--white-foam);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#note-textarea {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--pacific-blue);
+    padding: 15px;
+    color: var(--white-foam);
+    font-family: inherit;
+    font-size: 1rem;
+    resize: none;
+    border-radius: 5px;
+}
